@@ -21,7 +21,9 @@ class Product extends Component {
                      </strong>
                   </h4>
                   <ul className="rating">
-                     { this.showRatings(product.rating) }
+                     <li>
+                        {this.showRatings(product.rating)}
+                     </li>
                   </ul>
                   <p className="card-text">
                      {product.discription}
@@ -41,11 +43,17 @@ class Product extends Component {
    }
 
    showRatings(rating) {
-      return(
-      <li>
-         <i className="fa fa-star"></i>
-      </li>
-      )
+      var result = [];
+      if (rating > 0) {
+         for (var i = 1; i <= rating; i++) {
+            result.push(<i className="fa fa-star"></i>);
+         }
+         for (var j = rating + 1; j <= 5; j++) {
+            result.push(<i className="fa fa-star-o"></i>);
+         }
+      }
+
+      return result;
    }
 }
 
