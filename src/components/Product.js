@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import products from '../reducers/products';
+//import products from '../reducers/products';
 
 class Product extends Component {
    render() {

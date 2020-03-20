@@ -1,29 +1,39 @@
 import * as types from './../constants/ActionType';
 
-
-
-var data = JSON.parse(localStorage.getItem('CART'));
+//var data = JSON.parse(localStorage.getItem('CART'));
 var initState = [
     {
         product: {
-            id : 1,
-        name : 'Iphone 11 Pro Max',
-        image : 'https://cdn.tgdd.vn/Products/Images/42/200533/iphone-11-pro-max-green-600x600.jpg',
-        description : 'Sản phẩm do apple sản xuất',
-        price : 500,
-        inventory : 10,
-        rating : 5
+            id: 1,
+            name: 'Iphone 11 Pro Max',
+            image: 'https://cdn.tgdd.vn/Products/Images/42/200533/iphone-11-pro-max-green-600x600.jpg',
+            description: 'Sản phẩm do apple sản xuất',
+            price: 500,
+            inventory: 10,
+            rating: 5
         },
-        quanlity : 5
+        quanlity: 5
+    },
+    {
+        product: {
+            id: 3,
+            name: 'Macbook Pro 2020',
+            image: 'https://images-na.ssl-images-amazon.com/images/I/71L2iBSyyOL._SL1500_.jpg',
+            description: 'Sản phẩm do apple sản xuất',
+            price: 2500,
+            inventory: 10,
+            rating: 5
+        },
+        quanlity: 2
     }
 ];
 
 const cart = (state = initState, action) => {
-    switch(action.type){
+    switch (action.type) {
         case types.ADD_TO_CART:
             console.log(action);
             return [...state];
-        default : return [...state];
+        default: return [...state];
     }
 }
 

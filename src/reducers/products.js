@@ -10,12 +10,12 @@ var initState = [
     },
     {
         id : 2,
-        name : 'VSmart Active 3',
-        image : 'https://muachonao.com/wp-content/uploads/2020/01/Vsmart-Active-3-6GB-64GB4.jpg',
+        name : 'Apple Watch',
+        image : 'https://cdn.fptshop.com.vn/Uploads/Originals/2018/9/14/636725444086534194_MU662VNA%201.png',
         description : 'Sản phẩm do VSmart sản xuất',
         price : 1500,
         inventory : 10,
-        rating : 3
+        rating : 4
 
     },
     {
