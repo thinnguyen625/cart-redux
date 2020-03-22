@@ -25,7 +25,6 @@ class CartResult extends Component {
          </tr>
       );
    }
-
    showTotalAmount(cart) {
       var total = 0;
 
