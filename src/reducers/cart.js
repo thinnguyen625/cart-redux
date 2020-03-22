@@ -1,5 +1,4 @@
-import * as types from './../constants/ActionType';
-
+import * as Types from './../constants/ActionType';
 //var data = JSON.parse(localStorage.getItem('CART'));
 var initState = [
     {
@@ -29,9 +28,13 @@ var initState = [
 ];
 
 const cart = (state = initState, action) => {
+    var { product, quanlity } = action;
     switch (action.type) {
-        case types.ADD_TO_CART:
-            console.log(action);
+        case Types.ADD_TO_CART:
+            state.push({
+                product,
+                quanlity
+            });
             return [...state];
         default: return [...state];
     }

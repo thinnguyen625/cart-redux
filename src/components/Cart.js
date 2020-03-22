@@ -24,7 +24,6 @@ class Cart extends Component {
                </table>
             </div>
          </section>
-
       );
    }
 }

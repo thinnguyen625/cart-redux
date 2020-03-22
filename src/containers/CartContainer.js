@@ -12,7 +12,7 @@ class CartContainer extends Component {
       return (
          <Cart>
             { this.showCartItem(cart) }
-            { this.showTotalAmount(cart)}
+            { this.showTotalAmount(cart) }
          </Cart>
 
       );
@@ -30,7 +30,7 @@ class CartContainer extends Component {
             )
          })
       }
-      return result
+      return result;
    }
 
    showTotalAmount = (cart) => {
@@ -38,7 +38,7 @@ class CartContainer extends Component {
       if(cart.length > 0){
          result = <CartResult cart={cart}/>
       }
-      return result
+      return result;
    }
 }
 
@@ -62,7 +62,7 @@ const mapStateToProps = state => {
    return {
       cart : state.cart
    }
-
 }
+
 export default connect(mapStateToProps, null)(CartContainer);
 
