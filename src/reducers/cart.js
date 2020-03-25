@@ -3,17 +3,17 @@ var data = JSON.parse(localStorage.getItem('CART'));
 var initState = data ? data : [];
 
 const cart = (state = initState, action) => {
-    var { product, quanlity } = action;
+    var { product, quantity } = action;
     var index = -1; // Khong tim thay => index = -1
     switch (action.type) {
         case Types.ADD_TO_CART:
             index = findProductInCart(state, product);
             if (index !== -1) {
-                state[index].quanlity += quanlity;
+                state[index].quantity += quantity;
             } else {
                 state.push({
                     product,
-                    quanlity
+                    quantity
                 });
             }
             localStorage.setItem('CART', JSON.stringify(state));
@@ -26,6 +26,15 @@ const cart = (state = initState, action) => {
             }
             localStorage.setItem('CART', JSON.stringify(state));
             return [...state];
+
+        case Types.UPDATE_PRODUCT_IN_CART:
+            index = findProductInCart(state, product);
+            if(index !== -1){
+                state[index].quantity = quantity;
+            }
+            localStorage.setItem('CART', JSON.stringify(state));
+            return [...state];
+
         default: return [...state];
     }
 }
